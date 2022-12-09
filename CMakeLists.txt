@@ -1,24 +1,26 @@
 cmake_minimum_required(VERSION 3.8)
-project(hmi_agent_simulation_robot_py_node)
+project(hmi_agent_node)
 
-find_package(catkin REQUIRED COMPONENTS message_generation roscpp rospy std_msgs frc_robot_utilities_py_node)
+find_package(catkin REQUIRED COMPONENTS message_generation roscpp rospy std_msgs ck_utilities_py_node)
 
-# add_message_files(
-#   FILES
-#   NodeExampleData.msg
-# )
+catkin_python_setup()
 
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+add_message_files(
+  FILES
+  HMI_Signals.msg
+)
+
+generate_messages(
+  DEPENDENCIES
+  std_msgs  # Or other packages containing msgs
+)
 
 # generate_dynamic_reconfigure_options(
 #   cfg/nodeExample.cfg
 # )
 
 catkin_package(
-  CATKIN_DEPENDS message_runtime roscpp rospy std_msgs frc_robot_utilities_py_node
+  CATKIN_DEPENDS message_runtime roscpp rospy std_msgs ck_utilities_py_node
 )
 
 # include_directories(include ${catkin_INCLUDE_DIRS})
@@ -53,7 +55,6 @@ file(GLOB_RECURSE python_sources CONFIGURE_DEPENDS
      "${PROJECT_SOURCE_DIR}/scripts/*"
 )
 
-catkin_python_setup()
 catkin_install_python(PROGRAMS ${python_sources} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 # install(TARGETS listener talker

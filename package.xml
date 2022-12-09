@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>hmi_agent_simulation_robot_py_node</name>
+  <name>hmi_agent_node</name>
   <version>0.0.1</version>
   <description>
-    hmi_agent_simulation_robot_py_node
+    hmi_agent_node
   </description>
   <author>Team 195</author>
   <maintainer email="info@team195.com">Team 195</maintainer>
@@ -17,7 +17,7 @@
   <depend>roscpp</depend>
   <depend>rospy</depend>
   <depend>std_msgs</depend>
-  <depend>frc_robot_utilities_py_node</depend>
+  <depend>ck_utilities_py_node</depend>
 
   <test_depend>rostest</test_depend>
 </package>

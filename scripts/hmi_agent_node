@@ -2,10 +2,10 @@
 
 # Import required Python code.
 import roslib
-NODE_NAME = 'hmi_agent_simulation_robot_py_node'
+NODE_NAME = 'hmi_agent_node'
 roslib.load_manifest(NODE_NAME)
 import rospy
 import tf2_ros
-import hmi_agent_simulation_robot_py_node.main as main
+import hmi_agent_node.main as main
 if __name__ == '__main__':
     main.ros_main(NODE_NAME)
