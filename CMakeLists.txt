@@ -5,15 +5,15 @@ find_package(catkin REQUIRED COMPONENTS message_generation roscpp rospy std_msgs
 
 catkin_python_setup()
 
-add_message_files(
-  FILES
-  HMI_Signals.msg
-)
+# add_message_files(
+#   FILES
+#   HMI_Signals.msg
+# )
 
-generate_messages(
-  DEPENDENCIES
-  std_msgs  # Or other packages containing msgs
-)
+# generate_messages(
+#   DEPENDENCIES
+#   std_msgs  # Or other packages containing msgs
+# )
 
 # generate_dynamic_reconfigure_options(
 #   cfg/nodeExample.cfg
