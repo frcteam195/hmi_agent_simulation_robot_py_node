@@ -8,6 +8,13 @@ from ck_utilities_py_node.joystick import Joystick
 
 @dataclass
 class Params:
+    drivetrain_fwd_back : float = 0
+    drivetrain_left_right : float = 0
+    drivetrain_swerve_percent_fwd_vel : float = 0
+    drivetrain_swerve_direction : float = 0
+    drivetrain_swerve_percent_angular_rot : float = 0
+    drivetrain_quickturn : bool = False
+    drivetrain_brake : bool = False
     gauge_axis_id: int = -1
     elevator_vertical_axis_id: int = -1
     claw_open_button_id: int = -1
